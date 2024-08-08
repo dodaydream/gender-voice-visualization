@@ -85,8 +85,8 @@ def process(uploaded_file, transcript, tmp_dir):
 
 	with open(tmp_dir + '/align.sh', 'w') as f:
 		f.write("""#!/usr/bin/env bash
-		source /opt/conda/etc/profile.d/conda.sh
-		conda activate aligner
+		# source /opt/conda/etc/profile.d/conda.sh
+		# conda activate aligner
 		mfa align ./corpus/ english english ./output/ --clean
 		""")
 
